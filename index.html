@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div class="title">Chord Suggester</div>
+
+              
+              
+              <div id="circularMenu1" class="circular-menu circular-menu-left active">
+              
+                <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+                </a>
+              
+                <menu class="items-wrapper">
+                  <a id="chord" href="#" class="menu-item chord">C</a>
+                  <a id="chord" href="#" class="menu-item chord">Eb</a>
+                  <a id="chord" href="#" class="menu-item chord">A</a>
+                  <a id="chord" href="#" class="menu-item chord">F#</a>
+
+                  <a id="chord" href="#" class="menu-item chord">G</a>
+                  <a id="chord" href="#" class="menu-item chord">E</a>
+                  <a id="chord" href="#" class="menu-item chord">C#</a>
+                  <a id="chord" href="#" class="menu-item chord">Bb</a>
+
+                  <a id="chord" href="#" class="menu-item chord">D</a>
+                  <a id="chord" href="#" class="menu-item chord">B</a>
+                  <a id="chord" href="#" class="menu-item chord">Ab</a>
+                  <a id="chord" href="#" class="menu-item chord">F</a>
+
+
+
+                  <a id="chord" href="#" class="menu-item chord">Am</a>
+                  <a id="chord" href="#" class="menu-item chord">F#m</a>
+                  <a id="chord" href="#" class="menu-item chord">D#m</a>
+                  <a id="chord" href="#" class="menu-item chord">Cm</a>
+
+                  <a id="chord" href="#" class="menu-item chord">Em</a>
+                  <a id="chord" href="#" class="menu-item chord">C#m</a>
+                  <a id="chord" href="#" class="menu-item chord">A#m</a>
+                  <a id="chord" href="#" class="menu-item chord">Gm</a>
+
+                  <a id="chord" href="#" class="menu-item chord">Bm</a>
+                  <a id="chord" href="#" class="menu-item chord">G#m</a>
+                  <a id="chord" href="#" class="menu-item chord">Fm</a>
+                  <a id="chord" href="#" class="menu-item chord">Dm</a>
+                </menu>
+              
+              </div>
+
+    <div id="playedChords" class="playedChords"></div>
+              
+              
+
+<script> 
+
+let display = document.getElementById("playedChords");
+
+document.querySelectorAll('.chord').forEach(item => {
+  item.addEventListener('click', event => {
+    display.textContent += item.textContent + " ";
+  });
+})
+
+
+</script>
+</body>
+</html> 
